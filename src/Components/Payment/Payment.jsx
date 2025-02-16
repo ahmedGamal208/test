@@ -62,10 +62,10 @@ const Payment = () => {
         { shippingAddress: formik.values },
         {
           headers: { token: localStorage.getItem("token") },
-          params: { url: "https://test-zrt7.vercel.app/allorders" },
+          params: { url: "https://test-zrt7.vercel.app/" },
         }
       );
-      window.location.href(data.session.url);
+      window.open(data.session.url);
     } catch (error) {
       console.error("Error placing online order:", error);
     }
