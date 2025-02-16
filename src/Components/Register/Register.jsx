@@ -222,21 +222,18 @@ Or Can only contain letters (A-Z or a-z) and numbers (0-9)`
               )}
             </div>
 
-            <div className="flex justify-end items-center">
-              <button
+            <div className="flex justify-center md:justify-end items-center">
+            <button
                 type="submit"
                 disabled={!(formik.isValid && formik.dirty)}
-                className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2${
-                  formik.isValid && formik.dirty
-                    ? "bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300"
-                    : "bg-gray-400 cursor-not-allowed"
-                }`}
+                className={`focus:outline-none w-full md:w-1/4 text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 
+      ${
+        formik.isValid && formik.dirty
+          ? "bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300"
+          : "bg-gray-400 cursor-not-allowed"
+      }`}
               >
-                {isLoading ? (
-                  <i className="fa-solid fa-spin fa-spinner text-white"></i>
-                ) : (
-                  "Register Now"
-                )}
+                {isLoading? <i className="fa-solid fa-spin fa-spinner text-white"></i> : "Register Now"}
               </button>
             </div>
           </form>
