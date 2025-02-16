@@ -7,7 +7,7 @@ import { CartContext } from "../Context/CartContext";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
-  const { cartId, setNumOfItems, setProducts, setTotalPrice } =
+  const { cartId, setNumOfItems, setProducts } =
     useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ const Payment = () => {
         { shippingAddress: formik.values },
         {
           headers: { token: localStorage.getItem("token") },
-          params: { url: "https://test-zrt7.vercel.app/" },
+          params: { url: "http://localhost:5173" },
         }
       );
       window.open(data.session.url);

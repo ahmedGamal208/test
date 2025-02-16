@@ -114,9 +114,7 @@ function App() {
         {
           path: "/reset-password",
           element: (
-            <ProtectedRoute>
               <ResetPassword />
-            </ProtectedRoute>
           ),
         },
         { path: "*", element: <Error /> },
