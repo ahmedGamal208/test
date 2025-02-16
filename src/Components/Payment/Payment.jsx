@@ -65,7 +65,7 @@ const Payment = () => {
           params: { url: "https://test-zrt7.vercel.app/allorders" },
         }
       );
-      window.open(data.session.url);
+      window.location.href(data.session.url);
     } catch (error) {
       console.error("Error placing online order:", error);
     }
