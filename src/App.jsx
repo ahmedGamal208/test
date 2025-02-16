@@ -19,7 +19,7 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import AuthContextProvider from "./Components/Context/AuthContext";
 import WishlistContextProvider from "./Components/Context/WishlistContext";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   const x = new QueryClient();
