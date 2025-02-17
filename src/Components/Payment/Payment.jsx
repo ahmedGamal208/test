@@ -62,7 +62,7 @@ const Payment = () => {
         { shippingAddress: formik.values },
         {
           headers: { token: localStorage.getItem("token") },
-          params: { url: "https://test-6eblxfqzc-ahmedgamal208s-projects.vercel.app" },
+          params: { url: "https://test.vercel.app" },
         }
       );
       window.open(data.session.url);
