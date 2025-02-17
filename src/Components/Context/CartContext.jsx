@@ -34,7 +34,7 @@ const CartContextProvider = ({ children }) => {
 
       return data;
     } catch (error) {
-      console.log(error, "error from add product to cart - context");
+      console.log(error, "Error adding product to cart");
     }
   }
 
@@ -85,7 +85,7 @@ const CartContextProvider = ({ children }) => {
       setTotalPrice(data.data.totalCartPrice);
       setTotalCartItems(data.numOfCartItems);
     } catch (error) {
-      console.log(error, "error from updateCount context");
+      console.log(error, "error updating count");
     }
   }
 
@@ -107,7 +107,7 @@ const CartContextProvider = ({ children }) => {
       setTotalPrice(data.data.totalCartPrice);
       setTotalCartItems(data.numOfCartItems);
     } catch (error) {
-      console.log(error, "error from remove element context");
+      console.log(error, "error removing item");
     }
   }
 
@@ -129,7 +129,7 @@ const CartContextProvider = ({ children }) => {
       setTotalPrice(0);
       setTotalCartItems(null);
     } catch (error) {
-      console.log(error, "error from clear cart context");
+      console.log(error, "error clearing items");
     }
   }
 

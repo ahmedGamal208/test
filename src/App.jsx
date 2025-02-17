@@ -19,7 +19,7 @@ import AllOrders from "./Components/AllOrders/AllOrders";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import AuthContextProvider from "./Components/Context/AuthContext";
 import WishlistContextProvider from "./Components/Context/WishlistContext";
-// import "./App.css";
+import ProtectedResetPassword from "./Components/ProtectedResetPassword/ProtectedResetPassword";
 
 function App() {
   const x = new QueryClient();
@@ -114,7 +114,9 @@ function App() {
         {
           path: "/reset-password",
           element: (
+            <ProtectedResetPassword>
               <ResetPassword />
+            </ProtectedResetPassword>
           ),
         },
         { path: "*", element: <Error /> },

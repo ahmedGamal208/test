@@ -52,7 +52,7 @@ const Wishlist = () => {
           <div className="parent mt-3">
             {products.map((item, idx) => (
               <div
-                key={item._id}
+                key={idx}
                 className="child flex flex-col lg:flex-row lg:justify-between px-10 items-center pb-3 border-b border-slate-500 border-dotted"
               >
                 <div className="child1 flex flex-col lg:flex-row justify-between items-center w-full">

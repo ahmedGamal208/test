@@ -26,7 +26,7 @@ const Brands = () => {
     );
   }
 
-  const brands = data?.data.data || [];
+  const brands = data?.data.data;
 
   return (
     <div className="md:w-[90%] mx-auto">

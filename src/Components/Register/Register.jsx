@@ -30,9 +30,9 @@ const Register = () => {
     password: Yup.string()
       .required("Password is required")
       .matches(
-        /^[A-Za-z][A-Za-z0-9]{5,8}$/,
+        /^[A-Za-z][A-Za-z0-9]{5,10}$/,
         `must Start with a letter (either uppercase or lowercase).
-Or Be between 6 and 9 characters in total.
+Or Be between 6 and 10 characters in total.
 Or Can only contain letters (A-Z or a-z) and numbers (0-9)`
       ),
     rePassword: Yup.string()

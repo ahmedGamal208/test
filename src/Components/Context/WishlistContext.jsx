@@ -8,11 +8,9 @@ const WishlistContextProvider = ({ children }) => {
   const { token } = useContext(AuthContext);
 
   const [products, setProducts] = useState([]);
-  const [numOfItems, setNumOfItems] = useState(0);
   const [loading, setLoading] = useState(false);
 
   async function getUserWishlist() {
-    if (!token) return;
     setLoading(true);
     try {
       const { data } = await axios.get(
@@ -20,10 +18,9 @@ const WishlistContextProvider = ({ children }) => {
         { headers: { token } }
       );
       setProducts(data.data);
-      setNumOfItems(data.data.length);
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching wishlist:", error);
-    } finally {
       setLoading(false);
     }
   }
@@ -35,7 +32,6 @@ const WishlistContextProvider = ({ children }) => {
         { productId: id },
         { headers: { token } }
       );
-      setProducts((prev) => [...prev, { id }]);
       getUserWishlist();
       return data;
     } catch (error) {
@@ -50,7 +46,6 @@ const WishlistContextProvider = ({ children }) => {
         { headers: { token } }
       );
       setProducts((prev) => prev.filter((product) => product.id !== id));
-      getUserWishlist();
     } catch (error) {
       console.error("Error removing item from wishlist:", error);
     }
@@ -65,7 +60,6 @@ const WishlistContextProvider = ({ children }) => {
       value={{
         addProductToWishlist,
         products,
-        numOfItems,
         loading,
         removeItem,
       }}

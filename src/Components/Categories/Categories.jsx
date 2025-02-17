@@ -23,7 +23,7 @@ const Categories = () => {
     );
   }
 
-  const categories = data?.data.data || [];
+  const categories = data?.data.data;
 
   return (
     <div className="md:w-[90%] mx-auto">

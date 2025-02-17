@@ -51,7 +51,7 @@ const Products = () => {
     );
   }
 
-  const products = data?.data.data || [];
+  const products = data?.data.data;
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );

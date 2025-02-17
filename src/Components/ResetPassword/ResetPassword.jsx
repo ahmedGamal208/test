@@ -27,11 +27,10 @@ const ResetPassword = () => {
     newPassword: Yup.string()
       .required("Password is required")
       .matches(
-        /^[A-Za-z][A-Za-z0-9]{5,8}$/,
-        `must be
-    * Start with a letter (either uppercase or lowercase).
-    * Be between 6 and 9 characters in total.
-    * Can only contain letters (A-Z or a-z) and numbers (0-9)`
+        /^[A-Za-z][A-Za-z0-9]{5,9}$/,
+        `must Start with a letter (either uppercase or lowercase).
+         Or Be between 6 and 10 characters in total.
+         Or Can only contain letters (A-Z or a-z) and numbers (0-9)`
       ),
   });
 
@@ -42,7 +41,7 @@ const ResetPassword = () => {
     }
 
     try {
-      const { data } = await axios.put(
+      await axios.put(
         "https://ecommerce.routemisr.com/api/v1/auth/resetPassword",
         values
       );

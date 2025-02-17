@@ -77,7 +77,7 @@ const Cart = () => {
                       <img
                         src={item.product.imageCover}
                         className="w-full"
-                        alt=""
+                        alt={item.product.title}
                       />
                     </div>
                   </div>
