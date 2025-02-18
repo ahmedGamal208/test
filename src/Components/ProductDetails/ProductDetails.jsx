@@ -102,7 +102,7 @@ const ProductDetails = () => {
                     className={`fa-heart ${
                       isInWishlist
                         ? "fa-solid text-red-500"
-                        : "fa-regular text-gray-400"
+                        : "fa-regular text-gray-400 hover:text-red-300"
                     }`}
                   ></i>
                 </button>
@@ -114,7 +114,7 @@ const ProductDetails = () => {
 
           <button
             onClick={addToCart}
-            className={`w-full focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500`}
+            className={`w-full focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500 hover:bg-green-600`}
           >
             {loading ? (
               <i className="fa-solid fa-spinner fa-spin text-white"></i>

@@ -70,7 +70,7 @@ const Wishlist = () => {
                     </h3>
                     <button
                       onClick={() => removeItem(item._id)}
-                      className="focus:outline-none w-full lg:w-2/6 xl:w-1/6 text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-red-500"
+                      className="focus:outline-none w-full lg:w-2/6 xl:w-1/6 text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-red-500 hover:bg-red-600"
                     >
                       Remove
                     </button>
@@ -79,7 +79,7 @@ const Wishlist = () => {
                 <div className="child2 w-full lg:w-2/6 flex justify-center items-center p-4">
                   <button
                     onClick={() => handleAddToCart(item._id)}
-                    className="w-full focus:outline-none text-white xl:w-2/6 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-[#4FA74F]"
+                    className="w-full focus:outline-none text-white xl:w-2/6 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500 hover:bg-green-600"
                     disabled={processingId === item._id}
                   >
                     {processingId === item._id ? (

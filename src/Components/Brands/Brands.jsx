@@ -70,7 +70,7 @@ const Brands = () => {
             />
             <button
               onClick={() => setSelectedBrand(null)}
-              className="mt-4 w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition"
+              className="mt-4 w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600"
             >
               Close
             </button>

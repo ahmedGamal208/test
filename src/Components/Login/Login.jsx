@@ -180,14 +180,14 @@ const Login = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="flex justify-center md:justify-end   items-center">
+            <div className="flex justify-center md:justify-end items-center">
               <button
                 type="submit"
                 disabled={!(formik.isValid && formik.dirty)}
                 className={`focus:outline-none w-full md:w-1/6 text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 
                 ${
                   formik.isValid && formik.dirty
-                    ? "bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300"
+                    ? "bg-green-700 hover:bg-green-800"
                     : "bg-gray-400 cursor-not-allowed"
                 }`}
               >
@@ -208,17 +208,17 @@ const Login = () => {
               placeholder="Enter your email"
               value={forgotEmail}
               onChange={(e) => setForgotEmail(e.target.value)}
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 mb-4"
+              className="border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 mb-4 focus:ring-green-500 focus:border-green-500"
             />
             <div className="flex justify-end space-x-2">
               <button
-                className="bg-gray-300 px-4 py-2 rounded"
+                className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
                 onClick={() => setShowForgotPassword(false)}
               >
                 Cancel
               </button>
               <button
-                className="bg-green-700 text-white px-4 py-2 rounded"
+                className="bg-green-700 hover:bg-green-800  text-white px-4 py-2 rounded"
                 onClick={forgotPassword}
               >
                 Send Reset Link
@@ -238,17 +238,17 @@ const Login = () => {
               placeholder="Enter the code sent to your email"
               value={verificationCode}
               onChange={(e) => setVerificationCode(e.target.value)}
-              className="border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 mb-4"
+              className="border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5 mb-4 focus:ring-green-500 focus:border-green-500"
             />
             <div className="flex justify-end space-x-2">
               <button
-                className="bg-gray-300 px-4 py-2 rounded"
+                className="bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded"
                 onClick={() => setShowVerifyCode(false)}
               >
                 Cancel
               </button>
               <button
-                className="bg-green-700 text-white px-4 py-2 rounded"
+                className="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded"
                 onClick={verifyResetCode}
               >
                 Verify Code

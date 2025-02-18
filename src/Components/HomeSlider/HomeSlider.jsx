@@ -37,7 +37,7 @@ export default function HomeSlider() {
           <Slider {...settings}>
             <div>
               <img
-                src={jewelry}
+                src={bag}
                 className="w-full h-auto object-cover rounded-lg"
                 alt="jewelry"
               />
@@ -51,7 +51,7 @@ export default function HomeSlider() {
             </div>
             <div>
               <img
-                src={bag}
+                src={jewelry}
                 className="w-full h-auto object-cover rounded-lg"
                 alt="bag"
               />

@@ -64,7 +64,7 @@ const Products = () => {
           placeholder="Search products..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full max-w-2xl px-4 py-2 border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full max-w-2xl px-4 py-2 border rounded-lg shadow-md focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500"
         />
       </div>
 
@@ -106,7 +106,7 @@ const Products = () => {
                           className={`fa-heart ${
                             isInWishlist
                               ? "fa-solid text-red-500"
-                              : "fa-regular text-gray-400"
+                              : "fa-regular text-gray-400 hover:text-red-300"
                           }`}
                         ></i>
                       </button>
@@ -116,7 +116,7 @@ const Products = () => {
                   </div>
                   <button
                     onClick={() => addToCart(product.id)}
-                    className="mt-3 w-full focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 bg-green-500"
+                    className="mt-3 w-full focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 bg-green-500 hover:bg-green-600"
                   >
                     Add To Cart
                   </button>

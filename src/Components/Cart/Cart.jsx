@@ -49,13 +49,13 @@ const Cart = () => {
               </h3>
               <button
                 onClick={clearCart}
-                className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5  py-2.5 mb-2 bg-red-500`}
+                className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5  py-2.5 mb-2 bg-red-500 hover:bg-red-600`}
               >
                 Clear Cart
               </button>
               <Link
                 to={"/payment"}
-                className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5 mx-2 py-2.5 mb-2 bg-sky-500`}
+                className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5 mx-2 py-2.5 mb-2 bg-sky-500 hover:bg-sky-600`}
               >
                 Checkout
               </Link>
@@ -92,7 +92,7 @@ const Cart = () => {
                       onClick={function () {
                         removeItem(item.product._id);
                       }}
-                      className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-red-500`}
+                      className={`focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-red-500 hover:bg-red-600`}
                     >
                       Remove
                     </button>

@@ -97,9 +97,10 @@ const Payment = () => {
           </div>
         ))}
 
+        <div className="flex justify-between md:justify-normal items-center gap-4">
         <button
           type="submit"
-          className="focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500"
+          className="focus:outline-none w-1/2 md:w-2/6 md:px-1 xl:w-1/6 text-white font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500 hover:bg-green-600"
         >
           {loading ? (
             <i className="fa-solid fa-spin fa-spinner text-white"></i>
@@ -111,10 +112,11 @@ const Payment = () => {
         <button
           type="button"
           onClick={onlineOrder}
-          className="focus:outline-none text-white font-medium rounded-lg text-sm px-5 py-2.5 mx-2 mb-2 bg-green-500"
+          className="focus:outline-none text-white w-1/2 md:w-2/6 md:px-1 xl:w-1/6 font-medium rounded-lg text-sm px-5 py-2.5 mx-2 mb-2 bg-green-500 hover:bg-green-600"
         >
           Online Payment
         </button>
+        </div>
       </form>
     </div>
   );
