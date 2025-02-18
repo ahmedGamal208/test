@@ -76,10 +76,10 @@ const Wishlist = () => {
                     </button>
                   </div>
                 </div>
-                <div className="child2 w-full lg:w-2/6 flex justify-center items-center p-4">
+                <div className="child2 w-full lg:w-2/6 flex justify-end items-center p-4">
                   <button
                     onClick={() => handleAddToCart(item._id)}
-                    className="w-full focus:outline-none text-white xl:w-2/6 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500 hover:bg-green-600"
+                    className="w-full focus:outline-none text-white lg:w-3/4 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 bg-green-500 hover:bg-green-600"
                     disabled={processingId === item._id}
                   >
                     {processingId === item._id ? (
