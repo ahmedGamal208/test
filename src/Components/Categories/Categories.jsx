@@ -28,7 +28,7 @@ const Categories = () => {
   return (
     <div className="md:w-[90%] mx-auto">
       <h2 className="text-2xl font-bold text-center my-5">Categories</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 px-20">
         {categories.map((category) => (
           <div
             key={category._id}
@@ -37,7 +37,7 @@ const Categories = () => {
             <img
               src={category.image}
               alt={category.name}
-              className="w-full h-32 object-cover rounded-md"
+              className="w-full h-[24rem] object-cover rounded-md"
             />
             <h3 className="text-center mt-3 text-lg font-semibold text-green-700">
               {category.name}

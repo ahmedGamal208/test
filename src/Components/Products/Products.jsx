@@ -58,7 +58,7 @@ const Products = () => {
 
   return (
     <div className="md:w-[90%] mx-auto">
-      <div className="my-5 flex justify-center">
+      <div className="my-5 flex justify-center px-5">
         <input
           type="text"
           placeholder="Search products..."

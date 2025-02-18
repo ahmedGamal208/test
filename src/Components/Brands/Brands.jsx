@@ -31,7 +31,7 @@ const Brands = () => {
   return (
     <div className="md:w-[90%] mx-auto">
       <h2 className="text-2xl font-bold text-center my-5">Brands</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-5">
         {brands.map((brand) => (
           <div
             key={brand._id}

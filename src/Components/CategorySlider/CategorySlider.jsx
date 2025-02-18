@@ -43,7 +43,7 @@ export default function CategorySlider() {
   };
 
   return (
-    <div className="py-6 mx-auto px-4 relative">
+    <div className="py-6 mx-auto relative">
       <Slider {...settings}>
         {data?.data.data.map((item, idx) => (
           <div key={idx} className="p-2">
