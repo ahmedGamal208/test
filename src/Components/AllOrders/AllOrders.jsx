@@ -8,7 +8,6 @@ const AllOrders = () => {
 
   const { isLoading, data } = useQuery("allOrders", getAllOrders);
 
-  console.log(data);
 
   async function getAllOrders() {
     return await axios.get(
@@ -35,7 +34,7 @@ const AllOrders = () => {
   return (
     <div className="p-5 mx-auto md:w-[90%] mt-5">
       {data?.data.length > 0 ? (
-        data.data.map((order, idx) => (
+        data?.data.map((order, idx) => (
           <div key={idx} className="p-6 my-5 bg-slate-100 ">
             <h2>Total Order Price: {order.totalOrderPrice} EGP</h2>
             <h2>Payment Method: {order.paymentMethodType}</h2>

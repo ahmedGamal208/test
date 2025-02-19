@@ -87,7 +87,7 @@ const Navbar = () => {
                   { to: "/category", label: "Categories" },
                   { to: "/brands", label: "Brands" },
                   { to: "/allorders", label: "All Orders" },
-                ].map(({ to, label }) => (
+                ]?.map(({ to, label }) => (
                   <li key={to} className="relative">
                     <NavLink
                       to={to}

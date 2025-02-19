@@ -11,6 +11,7 @@ const WishlistContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   async function getUserWishlist() {
+    if (!token) return;
     setLoading(true);
     try {
       const { data } = await axios.get(
@@ -24,6 +25,7 @@ const WishlistContextProvider = ({ children }) => {
       setLoading(false);
     }
   }
+
 
   async function addProductToWishlist(id) {
     try {
